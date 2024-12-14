@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Ня</title>
+
+    <link rel="shortcut icon" href="/img/Flower.png" type="image/png">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link href="/css/croppie.css" rel="stylesheet">
+    <link href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css">
+</head>
+<body> 
+    <div class="profile-container">
+        <h1 id="userNick">Пользователь</h1>
+        <div class="avatar">
+            <img src="/img/avatar.webp" id="avatar" alt="User Avatar" onclick="openFileDialog()">
+            <input type="file" id="uploadAvatar" class="hidden-input" accept="image/*">
+        </div>
+        <label for="nickname">Ник:</label>
+        <input type="text" id="nickname" name="nickname" placeholder="Введите ваш ник">
+
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login" placeholder="Введите ваш новый логин" required>
+
+        <label for="creation-date">Аккаунт создан:</label>
+        <input type="text" id="creation-date" name="creation-date" placeholder="Дата создания аккаунта" disabled>
+
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender">
+            <option value="male">Мужчина</option>
+            <option value="female">Женщина</option>
+        </select>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Введите свой номер телефона">
+
+        <button id="submitDataChanges">Сохранить изменения</button>
+        <p class="logout">Хочешь уйти? <a href="/auth/logout">Уходи</a></p>
+    </div>
+
+    <div id="croppie-container" style="display: none;"></div>
+
+    <div class="previewAvatar">
+        <div class="preview">
+            <img id="previewImage">
+        </div>
+        <div class="buttons">
+            <a class="btn" id="closePreviewAvatar">Отмена</a>
+            <a class="btn" id="savePreviewAvatar">Сохранить</a>
+        </div>
+    </div>
+</body>
+
+<div class="notifications">
+    
+</div>
+
+</html>
+
+<script src="/js/profile.js"></script>
+<script src="/js/croppie.js"></script>

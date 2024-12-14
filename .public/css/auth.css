@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background: -webkit-linear-gradient(45deg, #23172e,#48244d);
+    background: linear-gradient(45deg, #23172e,#48244d);
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.cont {
+    position: absolute;
+    width: 25%;
+    height: max-content;
+    padding: 10px;
+
+    background-color: rgb(66, 57, 70);
+    border-radius: 20px;
+    color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    .title {
+        width: 100%;
+        height: max-content;
+        text-align: center;
+
+        h1 {
+            color: rgb(199, 199, 199);
+        }
+
+        p {
+            color: rgb(153, 127, 170);
+        }
+    }
+
+    .content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .inputRow {
+            width: 90%;
+
+            h3 {
+                color: rgb(199, 199, 199);
+                font-size: 20px;
+            }
+
+            p {
+                color: rgb(199, 199, 199);
+            }
+
+            span {
+                margin-top: 5px;
+                color: gray;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            input {
+                width: 100%;
+                height: 35px;
+                background-color: rgb(78, 78, 78);
+                border: none;
+                color: rgb(255, 192, 239);
+                outline: none;
+                padding-left: 10px;
+                margin-top: 10px;
+                border-radius: 20px;
+            }
+
+            input::placeholder {
+                color: rgb(156, 156, 156);
+            }
+        }
+
+        .prehelp{
+            display: flex;
+            color: rgb(199, 199, 199);
+        }
+
+        .remember, .forgot{
+            width: max-content;
+            margin: 0 max(26px, 1.354vw);
+            text-align: left;
+        }
+        .remember input:checked + label:after {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=100);
+            opacity: 1;
+        }
+        .remember label{
+            position: relative;
+            cursor: var(--cursor-pointer);
+            padding-left: max(15px, .78125vw);
+            user-select: none;
+        }
+        .remember label:after{
+            position: absolute;
+            top: max(1px, .052vw);
+            left: min(-10px, -0.52vw);
+            width: max(15px, .78125vw);
+            height: max(8px, .417vw);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            content: '';
+            background-color: transparent;
+            border: solid #cb60e6;
+            border-width: 0 0 max(3px, .15625vw) max(3px, .15625vw);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .remember label:before{
+            position: absolute;
+            width: max(17px, .89vw);
+            height: max(17px, .89vw);
+            top: 0;
+            left: min(-14px, -0.7292vw);
+            content: '';
+            border: max(1px, .052vw) solid #5A6374;
+        }
+        .remember input{
+            visibility: hidden;
+            accent-color: #bd64e0;
+            width: max(15px, .78125vw);
+            height: max(15px, .78125vw);
+            margin: 0;
+        }
+
+        button {
+            background: linear-gradient(to top right, #2a283f, #4b1d48);
+            margin-top: 20px;
+            color: rgb(174, 136, 199);
+            border: none;
+            outline: 0;
+            font-size: 20px;
+            border-radius: 20px;
+            width: 80%;
+            height: 50px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        button:hover {
+            box-shadow:0 0 20px #713b86;
+        }
+
+        .what {
+            color: rgb(164, 164, 164);
+            margin-bottom: 5px;
+            cursor: pointer;
+
+            span {
+                color: rgb(153, 127, 170);
+            }
+        }
+    }
+}
+
+.notifications {
+    display: flex;
+    position: fixed;
+    top: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .item {
+        width: max-content;
+        max-width: 800px;
+        height: 50px;
+        background-color: #aa00ff91;
+        color: whitesmoke;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 0px 20px;
+        border-radius: 25px;
+        font-size: 18px;
+        animation: showNotification 1s ease-in-out forwards;
+    }
+
+    i {
+        font-size: 22px;
+    }
+
+    p {
+        margin-left: 5px;
+    }
+}
+
+@keyframes showNotification {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideNotification {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    margin: auto auto;
+    position: relative;
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    box-sizing: border-box;
+    animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+    33% {
+        background: #FFF;
+        box-shadow: -24px 0 #ce54f3, 24px 0 #FFF;
+    }
+    66% {
+        background: #ce54f3;
+        box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    }
+    100% {
+        background: #FFF;
+        box-shadow: -24px 0 #FFF, 24px 0 #ce54f3;
+    }
+}
+
+@keyframes hideBlock {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200%);
+    }
+}
+
+@keyframes showBlock {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

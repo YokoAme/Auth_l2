@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Ня</title>
+
+    <link rel="shortcut icon" href="/img/Flower.png" type="image/png">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+</head>
+<body> 
+    <div class="notifications"></div>
+    <div class="cont login">
+        <div class="title">
+            <h1>С возвращением!</h1>
+            <p>Войдите в свой аккаунт</p>
+        </div>
+        <div class="content">
+            <div class="inputRow">
+                <p>Email/Логин</p>
+                <input type="text" maxlength="50" placeholder="Введите ваш Email или Логин">
+            </div>
+    
+            <div class="inputRow">
+                <p>Пароль</p>
+                <input type="password" placeholder="Введите ваш пароль">
+            </div>
+
+            <div class="prehelp">
+                <div class="remember">
+                    <input type="checkbox" id="remember_checkbox"><label for="remember_checkbox">Запомнить на 30 дней</label>
+                </div>
+            </div>
+
+            <button class="click">Войти</button>
+            <span class="what">Нет аккаунта? <span class="toRegister">Зарегистрироваться</span></span>
+        </div>
+    </div>
+    <div class="cont register" style="display: none;">
+        <div class="title">
+            <h1>Регистрация</h1>
+            <p>Введите данные вашего нового аккаунта</p>
+        </div>
+        <div class="content">
+            <div class="inputRow">
+                <h3>Email</h3>
+                <span>С помощью него вы сможете зайти в свой аккаунт</span>
+                <input type="email" maxlength="50" placeholder="Введите ваш Email">
+            </div>
+
+            <div class="inputRow">
+                <h3>Логин</h3>
+                <span>С помощью него вы сможете зайти в свой аккаунт</span>
+                <input type="text" maxlength="50" placeholder="Введите ваш логин">
+            </div>
+    
+            <div class="inputRow">
+                <h3>Пароль</h3>
+                <input type="password" id="one_pass" placeholder="Введите ваш пароль">
+            </div>
+
+            <div class="inputRow">
+                <h3>Подтверждение пароля</h3>
+                <input type="password" id="two_pass" placeholder="Повторите ваш пароль">
+            </div>
+
+            <button class="click">Зарегистрироваться</button>
+            <span class="what">Появился аккаунт? <span class="toLogin">Войти</span></span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="/js/auth.js"></script>

@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: -webkit-linear-gradient(45deg, #23172e,#48244d);
+    background: linear-gradient(45deg, #23172e,#48244d);
+    
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    background-color: #1e1e1e78;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: rgb(199, 199, 199);
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.profile-container label {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: rgb(199, 199, 199);
+}
+
+.profile-container input, .profile-container select {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(56, 55, 56);
+    color: rgb(255, 192, 239);
+    box-sizing: border-box;
+}
+
+.profile-container button {
+    background: linear-gradient(to top right, #2a283f, #4b1d48);
+    border: none;
+    color: rgb(187, 143, 217);
+    outline: 0;
+    font-size: 18px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 350px;
+    height: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.profile-container button:hover {
+    background-color: #3700b3;
+}
+
+.profile-container .logout {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(164, 164, 164);
+
+    a {
+        color: rgb(153, 127, 170);
+        text-decoration: none;
+    }
+}
+
+.previewAvatar {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 45%;
+    max-height: 80%;
+    background-color: #29273E;
+    border-radius: 25px;
+    flex-direction: column;
+    align-items: center;
+    animation: slideUp 1s ease-in-out forwards;
+    overflow-y: auto;
+} .previewAvatar .preview {
+    margin-top: 30px;
+} .previewAvatar .preview #previewImage {
+    margin-top: 20px;
+    width: 512px;
+    height: 512px;
+} .previewAvatar .buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+} .previewAvatar .buttons .btn {
+    color: lightskyblue;
+    text-decoration: none;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    background-color: #5c5c5c;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 150%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top: 150%;
+    }
+}
+
+.hidden-input {
+    display: none;
+}
+
+.notifications {
+    display: flex;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    flex-direction: column;
+    gap: 20px;
+} .notifications .item {
+    width: max-content;
+    max-width: 400px;
+    height: 50px;
+    background-color: #aa00ff91;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-family: Comic Sans MS;
+    animation: showNotification 1s ease-in-out forwards;
+}
+
+@keyframes showNotification {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideNotification {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    margin: auto auto;
+    position: relative;
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    box-sizing: border-box;
+    animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+    33% {
+        background: #FFF;
+        box-shadow: -24px 0 #ce54f3, 24px 0 #FFF;
+    }
+    66% {
+        background: #ce54f3;
+        box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    }
+    100% {
+        background: #FFF;
+        box-shadow: -24px 0 #FFF, 24px 0 #ce54f3;
+    }
+}
