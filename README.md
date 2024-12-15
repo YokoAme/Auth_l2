@@ -1,4 +1,6 @@
 # Auth_l2
+You can access the website using the following link:  
+   [https://ame.danone.dev/]
 # Project Setup Instructions
 
 ## Prerequisites  
@@ -29,3 +31,4 @@ Before starting, ensure you have the following tools installed:
 5. Access the Project:  
    The project will be available locally at:  
    http://localhost:7482
+   
