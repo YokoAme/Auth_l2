@@ -113,7 +113,7 @@ web
 
     const text = data.emailOrLogin
     if(data.type == "email") {
-        if(!validateEmail(email)) return res.status(400).json({error: true, msg: 'Введите действительную почту'})
+        if(!validateEmail(text)) return res.status(400).json({error: true, msg: 'Введите действительную почту'})
         
         if(!await mongo.user.exists({ email: text })) return res.status(400).json({error: true, msg: 'Аккаунт с данной почтой не найден'});
     } else if(data.type == "login") {

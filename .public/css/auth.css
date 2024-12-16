@@ -266,13 +266,13 @@ body {
         transform: translateY(0);
     }
     to {
-        transform: translateY(200%);
+        transform: translateY(500%);
     }
 }
 
 @keyframes showBlock {
     from {
-        transform: translateY(-200%);
+        transform: translateY(-500%);
     }
     to {
         transform: translateY(0);

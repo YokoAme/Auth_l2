@@ -26,9 +26,15 @@
       </p>
     </div>
 
-    <button class="login"><a href="/auth">Войти</a></button>
+    <button class="login" onclick="goToAuth()">Войти</button>
   </main>
   
-  <p class="author">Design assistance <a href="https://danone.dev">@danoneofficial</a></p>
+  <p class="author">Design assistance: <a href="https://danone.dev">@danoneofficial</a></p>
 </body>
 </html>
+
+<script>
+  function goToAuth() {
+    window.location.replace('/auth')
+  } 
+</script>
