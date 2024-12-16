@@ -1,5 +1,5 @@
 <h1 align="center">Select the language of the README</h1>
-<h3 align="center">EN <a href=https://github.com/YokoAme/Auth_l2/edit/main/README-RU.md>RU</a></h3>
+<h3 align="center">EN <a href=https://github.com/YokoAme/Auth_l2/blob/main/README-RU.md>RU</a></h3>
 
 # Auth_l2
 You can access the website using the following link:  
