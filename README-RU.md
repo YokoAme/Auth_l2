@@ -1,5 +1,5 @@
 <h1 align="center">Выберите язык README</h1>
-<h3 align="center"><a href=https://github.com/YokoAme/Auth_l2/edit/main/README.md>EN</a> RU</h3>
+<h3 align="center"><a href=https://github.com/YokoAme/Auth_l2/blob/main/README.md>EN</a> RU</h3>
 
 # Auth_l2
 Вы можете получить доступ к тестовой версии сайта, перейдя по следующей ссылке:  
